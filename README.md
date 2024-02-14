@@ -9,8 +9,9 @@ allows users to easily customize the look and feel of their
 devices. Make your devices your own.
 
 ## Browsing themes
-All themes in this repository are viewable in our theme test tool
-(coming soon).
+All themes in this repository are viewable in our theme test tool:
+
+https://themes.elemenity.com/viewer/
 
 ## Creating a theme
 To create your own theme, you can make a copy of the 'skeleton'
