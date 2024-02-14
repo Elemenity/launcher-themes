@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>elemenity launcher</title>
+        <link id="stylesheet" rel="stylesheet" href="">
+        <script src="menu.js"></script>
+	<script type="text/javascript">
+		function load() {
+			let theme =
+				new URLSearchParams(window.location.search).get('theme') || 'skeleton';
+			console.log('using theme: ', theme);
+			document.querySelector('#stylesheet').href = `../${theme}/style.css`;
+			document.querySelector('#brand').style.background_image =
+				`url(../${theme}/launch_logo.png)`;
+
+			menu_load();
+			console.log('loaded');
+		}
+	</script>
+    </head>
+    <body onload="load()">
+        <div id="brand">
+        </div>
+        <div id="menu">
+        </div>
+        <div id="card" style="display: none">
+        </div>
+        <h3 id="menu_title">
+        </h3>
+    </body>
+</html>

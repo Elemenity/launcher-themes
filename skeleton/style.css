@@ -1,0 +1,89 @@
+:root {
+    --card-bg: #000000;
+}
+
+body {
+    overflow: hidden;
+    image-rendering: pixelated;
+    color: #cccccc;
+    background-color: #333333;
+}
+.entry a {
+    scroll-behavior: smooth;
+}
+#brand {
+    position: sticky;
+    top: 1em;
+    left: 1em;
+    height: 10vh;
+    background-image: url('launch_logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#menu {
+    display: flex;
+    height: 80vh;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+#menu_title {
+    /* two lines in < 10% */
+    font-size: 2.5vh;
+    text-align: center;
+}
+.entry {
+    flex: 0 0 auto;
+    background-size: cover;
+    background-position: center;
+    width: 30vw;
+    height: 30vw;
+    border: 1px solid;
+    border-radius: 1em;
+    margin-right: 5vw;
+}
+.hidden {
+    border: 0px;
+}
+
+.toCard {
+    animation: 1s 1 forward toCard;
+}
+@keyframes toCard {
+    from {
+    }
+    to {
+        width: 85vw;
+    }
+}
+
+#card {
+    box-sizing: border-box;
+    width: 80vw;
+    height: 80vh;
+    display: block;
+    background-color: var(--card-bg);
+    position: fixed;
+    left: 10vw;
+    top: 10vh;
+    z-index: 2;
+    border: 1px solid;
+    border-radius: 2em;
+    padding: 2em;
+    overflow-y: hidden;
+}
+
+.nested_entry {
+    border: 1px solid black;
+    border-radius: 1em;
+    padding: 0.5em;
+    margin-bot: 0.5em;
+}
+#nested_entry_focused {
+    border: 2px solid #cccccc;
+    border-radius: 1em;
+}
+#menu_title {
+    text-align: center;
+}

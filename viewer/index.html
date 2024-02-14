@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>Elemenity Launcher - Theme viewer</title>
+		<style type="text/css">
+			.container {
+				display: flex;
+				flex-flow: column;
+				height: 100%;
+			}
+			#chooser {
+				margin-left: 2em;
+			}
+			.row {
+				display: flex;
+				flex-flow: row;
+				width: 100%;
+				margin-bottom: 1em;
+			}
+			.fill {
+				flex-grow: 1;
+				flex-basis: autop;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="container">
+					<h3><a href="https://www.elemenity.com">Elemenity</a> Theme Tester (<a href="https://github.com/Elemenity/launcher-themes">repo</a>)</h3>
+					<span>wasd / enter / escape to navigate. </span>
+				</div>
+				<select id="chooser" class="fill">
+					<option name="skeleton">skeleton</option>
+				</select>
+			</div>
+			<iframe id="demo" src="demo.html?theme=skeleton" class="fill" />
+		</div>
+	</body>
+</html>
