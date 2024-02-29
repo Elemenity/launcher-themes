@@ -21,8 +21,17 @@
 				flex-basis: autop;
 			}
 		</style>
+		<script>
+			function load() {
+				document.querySelector('#chooser').addEventListener('change', function(ev) {
+					document.querySelector('#demo').src = 
+						'demo.html?theme=' + ev.target.value;
+				});
+			}
+			
+		</script>
 	</head>
-	<body>
+	<body onload="load()">
 		<div class="container">
 			<div class="row">
 				<div class="container">
@@ -30,10 +39,11 @@
 					<span>wasd / enter / escape to navigate. </span>
 				</div>
 				<select id="chooser" class="fill">
+					<option name="elemenity">elemenity</option>
 					<option name="skeleton">skeleton</option>
 				</select>
 			</div>
-			<iframe id="demo" src="demo.html?theme=skeleton" class="fill" />
+			<iframe id="demo" src="demo.html?theme=elemenity" class="fill" />
 		</div>
 	</body>
 </html>

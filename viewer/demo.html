@@ -12,6 +12,13 @@
 			document.querySelector('#brand').style.background_image =
 				`url(../${theme}/launch_logo.png)`;
 
+            // update css variables for style
+            let root = document.querySelector(':root');
+            root.style.setProperty('--bg-img',
+                    `url('../${theme}/background.png'`);
+            root.style.setProperty('--logo-img',
+                    `url('../${theme}/launch_logo.png'`);
+
 			menu_load();
 			console.log('loaded');
 		}
